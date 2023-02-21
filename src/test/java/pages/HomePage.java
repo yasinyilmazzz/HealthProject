@@ -22,4 +22,8 @@ public class HomePage {
 
     @FindBy(xpath = "//span[.='Room']")
     public WebElement roomOption;
+
+
+
+
 }
