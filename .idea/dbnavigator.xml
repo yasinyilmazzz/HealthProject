@@ -13,7 +13,8 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="d46ea7fb-35b5-408c-9102-b67353bd5dfc">
-      <console name="Connection" type="STANDARD" schema="medunna_db_v2" session="Main" />
+      <console name="Connection" type="STANDARD" schema="medunna_db_v2" session="Main"><![CDATA[select * from "public".physician
+where id=1328]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -21,6 +22,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
+  </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
@@ -34,7 +38,7 @@
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
-          <database-version value="9999.0" />
+          <database-version value="10.15" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />
@@ -510,5 +514,8 @@
         </visibility-settings>
       </environment>
     </general-settings>
+  </component>
+  <component name="DBNavigator.Project.StatementExecutionManager">
+    <execution-variables />
   </component>
 </project>
