@@ -2,12 +2,12 @@
 Feature: Health_Project US04
 
     Scenario: TC01_activate_registered_user
-      When Admin goes home page
-      When Admin click account menu dropdown
-      Then Admin click sign in button
-      And Admin enters admin_username
-      And Admin enters admin_password
-      And Admin clicks sign in submit button
+      When "Admin" goes home page
+      When "Admin" clicks account menu dropdown
+      Then "Admin" clicks sign in button
+      And "Admin" enters "admin_username" in username field
+      And "Admin" enters "admin_password" in password field
+      And "Admin" clicks sign in submit button
       Then Admin clicks administration dropdown
       And Admin click user management button
       Then Admin sort page by ID descending order

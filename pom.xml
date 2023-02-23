@@ -14,7 +14,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-
     <dependencies>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -83,7 +82,6 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.10.1</version>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -154,7 +152,6 @@
                     <target>19</target>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 
