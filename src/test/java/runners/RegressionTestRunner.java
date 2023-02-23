@@ -4,6 +4,13 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
+
+
+import io.cucumber.junit.Cucumber;
+        import io.cucumber.junit.CucumberOptions;
+        import org.junit.runner.RunWith;
+
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
@@ -11,14 +18,14 @@ import org.junit.runner.RunWith;
                 "html:target/default-cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml",
-                "rerun:target/failedRerun.txt",
-                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+                "rerun:target/failedRerun.txt"
         },
+        monochrome = true,
         features = "./src/test/resources/features",
+        glue = {"stepdefinitions"},
         dryRun = false,
-        glue = {"stepdefinitions", "hooks"},
-        tags = "@US04"
+        tags = "@data_tables_1"
 )
 
-public class Runner {
+public class RegressionTestRunner {
 }
