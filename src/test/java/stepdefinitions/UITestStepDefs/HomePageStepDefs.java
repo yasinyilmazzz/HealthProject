@@ -9,18 +9,16 @@ import utilities.Driver;
 public class HomePageStepDefs {
     HomePage homePage = new HomePage();
 
-    @When("Admin goes home page")
-    public void admin_goes_home_page() {
+    @When("{string} goes home page")
+    public void goes_home_page(String string) {
         Driver.getDriver().get(ConfigReader.getProperty("app_url"));
     }
-
-    @When("Admin click account menu dropdown")
-    public void admin_click_account_menu_dropdown() {
+    @When("{string} clicks account menu dropdown")
+    public void clicks_account_menu_dropdown(String string) {
         homePage.userIcon.click();
     }
-
-    @Then("Admin click sign in button")
-    public void admin_click_sign_in_button() {
+    @When("{string} clicks sign in button")
+    public void clicks_sign_in_button(String string) {
         homePage.signInOption.click();
     }
 
