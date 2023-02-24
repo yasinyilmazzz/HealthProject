@@ -18,13 +18,13 @@ public class MyAppointmentsPage {
     @FindBy(xpath = "//span[@class='d-none d-md-inline']")
     public List<WebElement> editButtonList;
 
-    @FindBy(partialLinkText = "appointment-update")
+    @FindBy(xpath = "//tbody//td[13]")
     public WebElement firstEditButton;
 
-    @FindBy(xpath = "(//span[.='Edit'])[3]")
+    @FindBy(xpath = "(//tbody//td[13])[2]")
     public WebElement secondEditButton;
 
-    @FindBy(xpath = "(//span[.='Edit'])[5]")
+    @FindBy(xpath = "(//tbody//td[13])[3]")
     public WebElement thirdEditButton;
 
     @FindBy(id = "hospitalmsappfrontendApp.appointment.home.createOrEditLabel")
