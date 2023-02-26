@@ -1,4 +1,4 @@
-package stepdefinitions.database_test_stepdefs;
+package stepdefinitions.databaseTestStepDefs;
 
 import io.cucumber.java.en.*;
 import utilities.DBUtils;
