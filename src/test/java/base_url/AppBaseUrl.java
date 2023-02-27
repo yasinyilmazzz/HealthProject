@@ -1,5 +1,6 @@
 package base_url;
 
+
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.junit.Before;
@@ -18,4 +19,5 @@ public class AppBaseUrl {
     }
 }
 // We can put generateToken() in base_url class as well by assigning it in header
+
 
