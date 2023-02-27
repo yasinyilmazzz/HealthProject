@@ -46,8 +46,9 @@ public class PhysicianShouldSeeTestStepDefs {
         ReusableMethods.waitFor(2);
         loginPage.password.sendKeys(ConfigReader.getProperty("doctor_password"));
     }
-    @When("physician click on Remember Me checbox")
-    public void physician_click_on_remember_me_checbox() {
+
+    @And("physician click on Remember Me checkbox")
+    public void physicianClickOnRememberMeCheckbox() {
         ReusableMethods.waitFor(2);
         loginPage.rememberMe.click();
     }
