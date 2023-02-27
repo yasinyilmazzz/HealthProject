@@ -23,4 +23,8 @@ public class Registerpage {
     @FindBy(id = "lastName")
     public WebElement enterLastName;
 
+    @FindBy(xpath = "//div[@class='invalid-feedback']")
+    public WebElement firstNameRequired;
+
+
 }
