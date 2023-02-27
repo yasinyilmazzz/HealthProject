@@ -2,14 +2,14 @@ package stepdefinitions.UITestStepDefs;
 
 import io.cucumber.java.en.*;
 import org.junit.Assert;
-import pages.PatientLoginPage;
+import pages.Patient_LoginPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-public class PatientLoginStepDefs {
+public class Patient_Login_StepDefs {
 
-    PatientLoginPage patientLoginPage=new PatientLoginPage();
+    Patient_LoginPage patientLoginPage=new Patient_LoginPage();
 
     @Given("patient is on {string} page")
     public void patient_is_on_page(String url) {

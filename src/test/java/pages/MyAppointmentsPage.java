@@ -1,11 +1,13 @@
 package pages;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 import java.util.List;
+import java.util.Random;
 
 public class MyAppointmentsPage {
     public MyAppointmentsPage() {
@@ -21,10 +23,10 @@ public class MyAppointmentsPage {
     @FindBy(xpath = "//tbody//td[13]")
     public WebElement firstEditButton;
 
-    @FindBy(xpath = "(//tbody//td[13])[2]")
+    @FindBy(xpath = "//tbody/tr[2]/td[13]")
     public WebElement secondEditButton;
 
-    @FindBy(xpath = "(//tbody//td[13])[3]")
+    @FindBy(xpath = "//tbody/tr[3]/td[13]")
     public WebElement thirdEditButton;
 
     @FindBy(id = "hospitalmsappfrontendApp.appointment.home.createOrEditLabel")
