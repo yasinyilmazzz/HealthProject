@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class PatientInfoPage {
+public class Patient_InfoPage {
 
-    public PatientInfoPage(){
+    public Patient_InfoPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -18,6 +18,9 @@ public class PatientInfoPage {
     public WebElement settings;
 
     @FindBy(id = "settings-title")
-    public WebElement settingsTitle;
+    public WebElement userInfoMessage;
+
+
+
 
 }

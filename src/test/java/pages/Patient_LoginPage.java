@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class PatientLoginPage {
+public class Patient_LoginPage {
 
-    public PatientLoginPage() {
+    public Patient_LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
@@ -29,7 +29,6 @@ public class PatientLoginPage {
     @FindBy(xpath = " //button[@type='submit']")
     public WebElement signInSubmitButton;
 
-    //@FindBy(xpath ="//span[.='herow zerow']")
     @FindBy(id="account-menu")
     public WebElement userID;
 
