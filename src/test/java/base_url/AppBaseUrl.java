@@ -8,8 +8,7 @@ public class AppBaseUrl {
     protected RequestSpecification spec;
 
     @Before
-    public void RegresBaseUrl() {
-
-        spec = new RequestSpecBuilder().setBaseUri("https://medunna.com/").build();
+    public void setUp(){
+        spec = new RequestSpecBuilder().setBaseUri("https://medunna.com/api").build();
     }
 }
