@@ -7,7 +7,7 @@ import utilities.Driver;
 
 public class Registerpage {
 
-        public Registerpage() {
+    public Registerpage() {
             PageFactory.initElements(Driver.getDriver(),this);
         }
 
@@ -25,6 +25,12 @@ public class Registerpage {
 
     @FindBy(xpath = "//div[@class='invalid-feedback']")
     public WebElement firstNameRequired;
+
+    @FindBy(xpath = "//div[@class='invalid-feedback']")
+    public WebElement lastNameRequired;
+
+    @FindBy(name = "username")
+    public WebElement userName;
 
 
 }

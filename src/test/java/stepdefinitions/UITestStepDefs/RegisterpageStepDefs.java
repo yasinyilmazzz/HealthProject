@@ -4,10 +4,14 @@ package stepdefinitions.UITestStepDefs;
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.junit.After;
 import org.junit.Assert;
 import pages.Registerpage;
 import utilities.ConfigReader;
+import utilities.Driver;
 import utilities.ReusableMethods;
+
+import static org.junit.Assert.assertTrue;
 
 public class RegisterpageStepDefs {
 
@@ -27,23 +31,48 @@ public class RegisterpageStepDefs {
         System.out.println(faker.idNumber().ssnValid());
         ReusableMethods.waitFor(1);
         Assert.assertFalse(ssn.contains("Your SSN is invalid"));//positive test
-        Assert.assertTrue(ssn.contains("valid_ssn_number"));
+        assertTrue(ssn.contains("valid_ssn_number"));
+
     }
 
     @And("{string} enters {string} in First Name Box")
     public void entersInFirstNameBox(String String, String firstName) {
         registerpage.enterFirstName.sendKeys(firstName);
-
-
+    }
+    @Then("{string} leaves the first name box blank")
+    public void leaves_the_first_name_box_blank(String string) {
+        registerpage.enterFirstName.click();
+    }
+    @Then("{string} enters chars in last name box")
+    public void enters_chars_in_last_name_box(String string) {
+        registerpage.enterLastName.click();
+    }
+    @Then("verify FirstName is required")
+    public void verify_first_name_is_required() {
+        assertTrue(registerpage.firstNameRequired.isDisplayed());
     }
 
-    @Then("{string} enters {string} in Last Name Box")
-    public void enters_in_last_name_box(String string, String lastName) {
-
-        registerpage.enterLastName.sendKeys(lastName);
-
+    @And("{string} enters {string} in Last Name Box")
+    public void entersInLastNameBox(String String, String lastname) {
+        registerpage.enterLastName.sendKeys(lastname);
 
     }
+    @Then("{string} leaves the last name box blank")
+    public void leaves_the_last_name_box_blank(String string) {
 
+        registerpage.enterLastName.sendKeys(" ");
+    }
 
+    @Then("{string} enters letters in username box")
+    public void enters_letters_in_username_box(String string) {
+        registerpage.userName.click();
+    }
+    @Then("verify that LastName is required")
+    public void verifyThatLastNameIsRequired() {
+        assertTrue(registerpage.lastNameRequired.isDisplayed());
+    }
+    @After
+    public void close_application() throws InterruptedException {
+        Driver.closeDriver();
+    }
 }

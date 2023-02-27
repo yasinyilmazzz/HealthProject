@@ -43,7 +43,8 @@ public class RegistrationPageStepDefs {
     }
     @Then("Verify that password strength is 2 bars and orange")
     public void verify_password_strength() {
-        assertTrue(registrationPage.passwordStrengthBar2.isDisplayed());
+        assertTrue(
+                registrationPage.passwordStrengthBar2.isDisplayed());
     }
 
     @When("User enters the {string} into New Password input field")
