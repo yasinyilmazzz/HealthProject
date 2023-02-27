@@ -19,20 +19,17 @@ public class MyAppointmentsStepDefs {
     @When("Doctor clicks {string} appointment edit button")
     public void doctor_clicks_appointment_edit_button(String string) {
 
-        Actions actions =new Actions(Driver.getDriver());
-        actions.click(myAppointmentsPage.firstEditButton).perform();
-
-//        switch (string) {
-//            case "first":
-//                myAppointmentsPage.firstEditButton.click();
-//                break;
-//            case "second":
-//                JSUtils.clickElementByJS(myAppointmentsPage.secondEditButton);
-//                break;
-//            default:
-//                JSUtils.clickElementByJS(myAppointmentsPage.thirdEditButton);
-//                break;
-//        }
+        switch (string) {
+            case "first":
+                myAppointmentsPage.firstEditButton.click();
+                break;
+            case "second":
+                JSUtils.clickElementByJS(myAppointmentsPage.secondEditButton);
+                break;
+            default:
+                JSUtils.clickElementByJS(myAppointmentsPage.thirdEditButton);
+                break;
+        }
 
 
     }
@@ -58,26 +55,31 @@ public class MyAppointmentsStepDefs {
 
     @When("Doktor enters {string} in Anamnesis field")
     public void doktor_enters_in_anamnesis_field(String string) {
+        myAppointmentsPage.anamnesis.clear();
         myAppointmentsPage.anamnesis.sendKeys(string);
     }
 
     @When("Doctor enters {string} in Treatment field")
     public void doctor_enters_in_treatment_field(String string) {
+        myAppointmentsPage.treatment.clear();
         myAppointmentsPage.treatment.sendKeys(string);
     }
 
     @When("Doctor enters {string} in Diagnosis field")
     public void doctor_enters_in_diagnosis_field(String string) {
+        myAppointmentsPage.diagnosis.clear();
         myAppointmentsPage.diagnosis.sendKeys(string);
     }
 
     @When("Doctor enters {string} in Prescription field")
     public void doctor_enters_in_prescription_field(String string) {
+        myAppointmentsPage.prescription.clear();
         myAppointmentsPage.prescription.sendKeys(string);
     }
 
     @When("Doctor enters {string} in Description field")
     public void doctor_enters_in_description_field(String string) {
+        myAppointmentsPage.description.clear();
         myAppointmentsPage.description.sendKeys(string);
     }
 
@@ -97,4 +99,33 @@ public class MyAppointmentsStepDefs {
     }
 
 
+    @And("Doctor select {string} from status")
+    public void doctorSelectFromStatus(String arg0) {
+        Select select = new Select(myAppointmentsPage.status);
+        select.selectByValue(arg0);
+    }
+
+    @Then("Doctor verify that {string} is selected")
+    public void doctorVerifyThatIsSelected(String arg0) {
+        switch (arg0){
+            case "PENDING" -> Assert.assertTrue(myAppointmentsPage.pending.isSelected());
+            case "CANCELLED" -> Assert.assertTrue(myAppointmentsPage.cancelled.isSelected());
+            case "COMPLETED" -> Assert.assertTrue(myAppointmentsPage.completed.isSelected());
+        }
+    }
+
+    @And("Doctor clears Diagnosis field")
+    public void doctorClearsDiagnosisField() {
+        myAppointmentsPage.diagnosis.clear();
+    }
+
+    @And("Doctor clears Treatment field")
+    public void doctorClearsTreatmentField() {
+        myAppointmentsPage.treatment.clear();
+    }
+
+    @And("Doctor clears Anamnesis field")
+    public void doctorClearsAnamnesisField() {
+        myAppointmentsPage.anamnesis.clear();
+    }
 }
