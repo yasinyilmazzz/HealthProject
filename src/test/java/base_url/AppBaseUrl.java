@@ -12,3 +12,5 @@ public class AppBaseUrl {
         spec = new RequestSpecBuilder().setBaseUri("https://medunna.com/api").build();
     }
 }
+// We can put generateToken() in base_url class as well by assigning it in header
+
