@@ -6,7 +6,7 @@ import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
-import static base_url.MedunnaBaseUrl.spec;
+import static base_url.AppBaseUrl.spec;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 import static utilities.AuthenticationMedunna.generateToken;
