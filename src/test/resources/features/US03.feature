@@ -2,14 +2,14 @@
 Feature: Password_strength_test
 
   Background: User_goes_to_url
-    Given User goes to the "https://medunna.com"
+    Given User goes to the home page
 
   @reg_pass_length_6_two_criteria
   Scenario Outline: TC_01_Verify_password_strength_when_pass_length_6_two_criteria
     When User clicks on "User Icon" in the top right corner
     And User clicks on "Register" from drop down menu
     And User enters the "<password>" into New Password input field
-    Then Verify that password strength is 2 bars and orange
+    Then Verify that password strength is weak-red
     And User closes the application
     Examples:
       | password |
@@ -22,7 +22,7 @@ Feature: Password_strength_test
     When User clicks on "User Icon" in the top right corner
     And User clicks on "Register" from drop down menu
     And User enters the "<password>" into New Password input field
-    Then Verify that password strength is 2 bars and orange
+    Then Verify that password strength is weak-red
     And User closes the application
     Examples:
       | password |
@@ -37,7 +37,7 @@ Feature: Password_strength_test
     And User clicks on "Register" from drop down menu
     And User enters the "<password>" into New Password input field
     And User clicks on Register submit button
-    Then Verify that password strength is 1 bar and red
+    Then Verify that password strength is weak-red
     Then Verify that error message appears
     And User closes the application
     Examples:
@@ -52,7 +52,7 @@ Feature: Password_strength_test
     When User clicks on "User Icon" in the top right corner
     And User clicks on "Register" from drop down menu
     And User clicks on Register submit button
-    Then Verify that password strength is 1 bar and red
+    Then Verify that password strength is weak-red
     And Verify that the error message appears
     And User closes the application
 
@@ -62,7 +62,7 @@ Feature: Password_strength_test
     When User clicks on "User Icon" in the top right corner
     And User clicks on "Register" from drop down menu
     And User enters the "<password>" into New Password input field
-    Then Verify that password strength is 1 bar and red
+    Then Verify that password strength is weak-red
     And User closes the application
     Examples:
       | password |
@@ -76,7 +76,7 @@ Feature: Password_strength_test
     When User clicks on "User Icon" in the top right corner
     And User clicks on "Register" from drop down menu
     And User enters the "<password>" into New Password input field
-    Then Verify that password strength is 1 bar and red
+    Then Verify that password strength is weak-red
     And User closes the application
     Examples:
       | password |
@@ -89,7 +89,7 @@ Feature: Password_strength_test
     When User clicks on "User Icon" in the top right corner
     And User clicks on "Register" from drop down menu
     And User enters the "<password>" into New Password input field
-    Then Verify that password strength is 1 bar and red
+    Then Verify that password strength is weak-red
     And User closes the application
     Examples:
       | password |
@@ -103,7 +103,7 @@ Feature: Password_strength_test
     When User clicks on "User Icon" in the top right corner
     And User clicks on "Register" from drop down menu
     And User enters the "<password>" into New Password input field
-    Then Verify that password strength is 5 bars and green
+    Then Verify that password strength is the strongest-green
     And User closes the application
     Examples:
       | password |
@@ -117,7 +117,7 @@ Feature: Password_strength_test
     When User clicks on "User Icon" in the top right corner
     And User clicks on "Register" from drop down menu
     And User enters the "<password>" into New Password input field
-    Then Verify that password strength is 1 bar and red
+    Then Verify that password strength is weak-red
     And User closes the application
     Examples:
       | password |
@@ -130,7 +130,7 @@ Feature: Password_strength_test
     When User clicks on "User Icon" in the top right corner
     And User clicks on "Register" from drop down menu
     And User enters the "<password>" into New Password input field
-    Then Verify that password strength is 2 bars and orange
+    Then Verify that password strength is good-orange
     And User closes the application
     Examples:
       | password |
@@ -143,7 +143,7 @@ Feature: Password_strength_test
     When User clicks on "User Icon" in the top right corner
     And User clicks on "Register" from drop down menu
     And User enters the "<password>" into New Password input field
-    Then Verify that password strength is 4 bars and green
+    Then Verify that password strength is strong-green
     And User closes the application
     Examples:
       | password |
@@ -157,7 +157,7 @@ Feature: Password_strength_test
     When User clicks on "User Icon" in the top right corner
     And User clicks on "Register" from drop down menu
     And User enters the "<password>" into New Password input field
-    Then Verify that password strength is 5 bars and green
+    Then Verify that password strength is the strongest-green
     And User closes the application
     Examples:
       | password |
@@ -172,7 +172,7 @@ Feature: Password_strength_test
     When User clicks on "User Icon" in the top right corner
     And User clicks on "Register" from drop down menu
     And User enters the "<password>" into New Password input field
-    Then Verify that password strength is 1 bar and red
+    Then Verify that password strength is weak-red
     And User closes the application
     Examples:
       | password |
@@ -181,12 +181,27 @@ Feature: Password_strength_test
       | abcdefge |
 
 
-  @reg_pass_length_max_50_one_criteria
-  Scenario Outline:TC_14_Verify_password_strength_when_pass_length_50_one_criteria
+  @reg_pass_length_8_three_criteria
+  Scenario Outline:TC_14_Verify_password_strength_when_pass_length_8_three_criteria
     When User clicks on "User Icon" in the top right corner
     And User clicks on "Register" from drop down menu
     And User enters the "<password>" into New Password input field
-    Then Verify that password strength is 1 bar and red
+    Then Verify that password strength is strong-green
+    And User closes the application
+    Examples:
+      | password |
+      | 12345Wa  |
+      | 12345W!  |
+      | 12345W.  |
+
+
+
+  @reg_pass_length_max_50_one_criteria
+  Scenario Outline:TC_15_Verify_password_strength_when_pass_length_50_one_criteria
+    When User clicks on "User Icon" in the top right corner
+    And User clicks on "Register" from drop down menu
+    And User enters the "<password>" into New Password input field
+    Then Verify that password strength is weak-red
     And User closes the application
     Examples:
       | password                                           |
@@ -195,11 +210,11 @@ Feature: Password_strength_test
       | 12345678901234567890123456789012345678901234565555 |
 
   @reg_pass_length_max_50_four_criteria
-  Scenario Outline:TC_15_Verify_password_strength_when_pass_length_50_four_criteria
+  Scenario Outline:TC_16_Verify_password_strength_when_pass_length_50_four_criteria
     When User clicks on "User Icon" in the top right corner
     And User clicks on "Register" from drop down menu
     And User enters the "<password>" into New Password input field
-    Then Verify that password strength is 5 bars and green
+    Then Verify that password strength is the strongest-green
     And User closes the application
     Examples:
       | password                                           |
