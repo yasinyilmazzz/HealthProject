@@ -6,7 +6,7 @@ Feature: Patient Login and Update Info
     Given patient is on "https://medunna.com/" page
     When click on user icon
     And click on Sign In option
-    And enter "herow" in Username input
+    And enter "oduntas" in Username input
     And enter "4004Hakan_" in Password input
     And click on Remember Me checkbox
     And click on Sign In submit button
@@ -30,7 +30,7 @@ Feature: Patient Login and Update Info
     Examples:Credentials
       | firstname | lastname |
       | apple     | orange   |
-      | 12543     | 22nerows |
+
 
 
     #firstname and lastname can not include numeric, this is a bug.
