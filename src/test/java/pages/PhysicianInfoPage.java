@@ -65,4 +65,42 @@ public class PhysicianInfoPage {
     @FindBy(xpath = "(//*[.='3604'])[1]")
     public WebElement appointmentNumber;
 
+    @FindBy(xpath = "(//*[.='ID'])[3]")
+    public WebElement inpatientIdSection;
+
+    @FindBy(id = "startDateLabel")
+    public WebElement startDateSection;
+
+    @FindBy(id = "endDateLabel")
+    public WebElement endDateSection;
+
+    @FindBy(id = "descriptionLabel")
+    public WebElement descriptSection;
+
+    @FindBy(id = "createdDateLabel")
+    public WebElement createdDateSection;
+
+    @FindBy(xpath = "(//*[.='Appointment'])[2]")
+    public WebElement appointmentSection;
+
+    @FindBy(id = "statusLabel")
+    public WebElement statusSection;
+
+    @FindBy(xpath = "(//*[.='Room'])[2]")
+    public WebElement roomSection;
+
+    @FindBy(xpath = "(//*[.='Patient'])[2]")
+    public WebElement patientSection;
+
+    @FindBy(id = "in-patient-status")
+    public WebElement status;
+
+    @FindBy(xpath = "//*[.='Save']")
+    public WebElement saveSubmitButton;
+
+    @FindBy(xpath = "//*[.='InPatient status was updated successfully']")
+    public WebElement successMessage;
+
+    @FindBy(id = "in-patient-room")
+    public WebElement room;
 }

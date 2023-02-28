@@ -1,5 +1,5 @@
 @US_14
-  Feature: Doctor should see all test results
+  Feature: Physician should see all test results
 
     Background: Sign in as a physician
       Given phsician goes to "app_url" page
@@ -7,7 +7,7 @@
       And physician click on Sign In option
       And physician enter "doctor_username" as username input
       And physician enter "doctor_password" as password input
-      And physician click on Remember Me checbox
+      And physician click on Remember Me checkbox
       And physician click on Sign In submit button
       And physician click on MyPages
       And physician click on My Appointments
