@@ -41,6 +41,7 @@ public class RegistrationPageStepDefs {
         ReusableMethods.waitFor(3);
         registrationPage.newPasswordField.sendKeys(password);
     }
+
     @When("User enters the {string} into New Password input field")
     public void user_enters_the_into_new_password_input_field(String string) {
         ReusableMethods.waitFor(3);
@@ -88,5 +89,6 @@ public class RegistrationPageStepDefs {
     public void close_application() throws InterruptedException {
         Driver.closeDriver();
     }
+
 
 }

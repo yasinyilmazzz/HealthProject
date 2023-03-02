@@ -26,6 +26,7 @@ import org.junit.runner.RunWith;
 //                "rerun:target/failedRerun.txt",
 //                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
 //        },
+
 )
 public class Runner {
 
