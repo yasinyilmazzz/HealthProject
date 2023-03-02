@@ -43,6 +43,8 @@ Hooks is used to run before and after each SCENARIO or SCENARIO OUTLINE
         System.out.println("RUN FOR ONLY SMOKE TEST SCENARIOS");
     }
     //This After hooks ONLY RUNS for @smoke_test TAGGED SCENARIOS
+
+
     @After("@smoke_tests")
     public void tearDownSmokeScenarios(){
 
@@ -55,7 +57,7 @@ Hooks is used to run before and after each SCENARIO or SCENARIO OUTLINE
 
 
 
-    @Before("@API_Tests")
+    @Before("@US08")
     public void beforeApi(){  // This method will run before Api Tests
         medunnaSetUp();
 

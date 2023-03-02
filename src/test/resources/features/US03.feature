@@ -1,8 +1,28 @@
 @registration_password
-Feature: Password_strength_test
+Feature:Password_strength_test
 
-  Background: User_goes_to_url
+  Background:User_goes_to_url
     Given User goes to the home page
+
+
+  @registration
+  Scenario Outline : Registration
+    When User clicks on "User Icon" in the top right corner
+    And User clicks on Register from drop down menu
+    And User enters the "<SSN>" into SSN input field
+    And User enters the "<First Name>" into First Name input field
+    And User enters the "<Last Name>" into Last Name input field
+    And User enters the "<Username>" into Username input field
+    And User enters the "<Email>" into Email input field
+    And User enters the "<password>" into New Password input field
+    And User enters the "<second password>" into New Password Confirmation input field
+    And User clicks on Register submit button
+    Then Verify that success message appears
+    And User closes the application
+    Examples:
+      | SSN         | First Name | Last Name | Username       | Email              | password | second password |
+      | 443-35-4226 | Adeline2   | Watson    | adeline2team02 | adeline2@gmail.com | Adele1!  | Adele1!         |
+
 
   @reg_pass_length_6_two_criteria
   Scenario Outline: TC_01_Verify_password_strength_when_pass_length_6_two_criteria
