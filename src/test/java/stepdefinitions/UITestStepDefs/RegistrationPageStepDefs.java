@@ -64,18 +64,15 @@ public class RegistrationPageStepDefs {
     public void user_clicks_on_user_icon() {
         registrationPage.userIcon.click();
     }
-    @When("User clicks on \"Register\" from drop down menu")
-    public void user_clicks_on_register() {
-        registrationPage.registerButton.click();
-    }
+
     @When("User enters the password into \"New Password\" input field")
     public void user_enters_password_into_new_password_field(String password) {
-        JSUtils.scrollDownByJS();
-        ReusableMethods.waitFor(3);
         registrationPage.newPasswordField.sendKeys(password);
-    }
+   }
     @When("User enters the {string} into New Password input field")
     public void user_enters_the_into_new_password_input_field(String string) {
+        JSUtils.scrollDownByJS();
+        ReusableMethods.waitFor(3);
     registrationPage.newPasswordField.sendKeys(string);
     }
     @When("User clicks on Register submit button")
