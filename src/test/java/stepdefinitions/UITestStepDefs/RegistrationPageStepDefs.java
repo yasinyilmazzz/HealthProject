@@ -20,13 +20,46 @@ public class RegistrationPageStepDefs {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Given("User goes to the home page")
-    public void user_goes_to_the_home_page() {
-       Driver.getDriver().get(ConfigReader.getProperty("app_url"));
+    public void userGoesToTheHomePage() {
+        Driver.getDriver().get(ConfigReader.getProperty("app_url"));
     }
-    @Given("User goes to the {string}")
-    public void userGoesToThe(String url) {
-        Driver.getDriver().get(url);
+    @When("User clicks on Register from drop down menu")
+    public void clicks_on_Register_from_drop_down_menu() {
+        registrationPage.registerButton.click();
     }
+    @When("User enters the {string} into SSN input field")
+    public void enters_the_into_ssn_input_field(String string) {
+        registrationPage.ssnTextInput.sendKeys(string);
+    }
+    @When("User enters the {string} into First Name input field")
+    public void enters_the_into_first_name_input_field(String string) {
+        registrationPage.firstNameTextInput.sendKeys(string);
+    }
+    @When("User enters the {string} into Last Name input field")
+    public void enters_the_into_las_name_input_field(String string) {
+        registrationPage.lastNameTextInput.sendKeys(string);
+    }
+    @When("User enters the {string} into Username input field")
+    public void enters_the_into_username_input_field(String string) {
+        registrationPage.userNameTextInput.sendKeys(string);
+    }
+    @When("User enters the {string} into Email input field")
+    public void enters_the_into_email_input_field(String string) {
+        registrationPage.emailTextInput.sendKeys(string);
+    }
+
+    @When("User enters the {string} into New Password Confirmation input field")
+    public void enters_the_into_new_password_confirmation_input_field(String string) {
+        registrationPage.secondPasswordTextInput.sendKeys(string);
+    }
+    @Then("Verify that success message appears")
+    public void verify_that_success_message_appears() {
+        ReusableMethods.waitFor(3);
+       assertTrue(registrationPage.successMessageToastContainer.isDisplayed());
+    }
+
+    //  **********************
+
     @When("User clicks on \"User Icon\" in the top right corner")
     public void user_clicks_on_user_icon() {
         registrationPage.userIcon.click();
@@ -35,7 +68,7 @@ public class RegistrationPageStepDefs {
     public void user_clicks_on_register() {
         registrationPage.registerButton.click();
     }
-    @When("User enters the password from test data column into \"New Password\" input field")
+    @When("User enters the password into \"New Password\" input field")
     public void user_enters_password_into_new_password_field(String password) {
         JSUtils.scrollDownByJS();
         ReusableMethods.waitFor(3);
@@ -44,8 +77,7 @@ public class RegistrationPageStepDefs {
 
     @When("User enters the {string} into New Password input field")
     public void user_enters_the_into_new_password_input_field(String string) {
-        ReusableMethods.waitFor(3);
-        registrationPage.newPasswordField.sendKeys(string);
+    registrationPage.newPasswordField.sendKeys(string);
     }
     @When("User clicks on Register submit button")
     public void User_clicks_on_register_submit_button() {
@@ -67,7 +99,7 @@ public class RegistrationPageStepDefs {
     }
     @Then("Verify that password strength is good-orange")
     public void verify_that_password_strength_is_good_orange() {
-        String orangeBar = registrationPage.passwordStrengthBar1.getAttribute("style");
+       String orangeBar = registrationPage.passwordStrengthBar1.getAttribute("style");
         assertEquals("background-color: rgb(255, 153, 0);",orangeBar);
     }
     @Then("Verify that password strength is the strongest-green")
@@ -89,6 +121,5 @@ public class RegistrationPageStepDefs {
     public void close_application() throws InterruptedException {
         Driver.closeDriver();
     }
-
 
 }
