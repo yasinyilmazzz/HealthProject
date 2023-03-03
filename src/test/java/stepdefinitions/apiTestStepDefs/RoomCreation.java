@@ -1,5 +1,6 @@
-/*package stepdefinitions.apiTestStepDefs;
+package stepdefinitions.apiTestStepDefs;
 
+import base_url.AppBaseUrl;
 import com.github.javafaker.Faker;
 import com.google.gson.Gson;
 import io.cucumber.java.en.Given;
@@ -13,13 +14,12 @@ import pojos.Room;
 import java.io.IOException;
 import java.util.HashMap;
 
-import static base_url.MedunnaBaseUrl.spec;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertEquals;
 import static utilities.AuthenticationMedunna.generateToken;
 
-public class RoomCreation {
+public class RoomCreation extends AppBaseUrl {
 
     Room room = new Room();
     Faker faker =new Faker();
@@ -126,6 +126,5 @@ public class RoomCreation {
 
 
 }
- */
 
 

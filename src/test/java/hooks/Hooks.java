@@ -50,13 +50,6 @@ Hooks is used to run before and after each SCENARIO or SCENARIO OUTLINE
 
         System.out.println("RUN FOR ONLY SMOKE TEST SCENARIOS");
     }
-
-
-
-
-
-
-
     @Before("@US08")
     public void beforeApi(){  // This method will run before Api Tests
         medunnaSetUp();
