@@ -79,10 +79,6 @@ public class US11_TC01_StepDefs {
         assertTrue(doctorsPage.timeSlotFrom.isDisplayed());
         assertTrue(doctorsPage.timeSlotTo.isDisplayed());
     }
-//
-//    @And("close the application")
-//    public void closeTheApplication() {
-//        Driver.closeDriver();
-//    }
+
 
 }
