@@ -2,7 +2,7 @@
 Feature: Health_Project US04
 
     Scenario: TC01_activate_registered_user
-      When "Admin" goes home page
+      When "Admin" goes home pagee
       When "Admin" clicks account menu dropdown
       Then "Admin" clicks sign in button
       And "Admin" enters "admin_username" in username field

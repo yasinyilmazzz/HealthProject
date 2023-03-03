@@ -17,15 +17,9 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
         dryRun = false,
-        tags = "@API_validation"
-//        plugin = {
-//                "pretty",
-//                "html:target/default-cucumber-reports.html",
-//                "json:target/json-reports/cucumber.json",
-//                "junit:target/xml-report/cucumber.xml",
-//                "rerun:target/failedRerun.txt",
-//                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
-//        },
+        tags = "@US04"
+
+
 )
 public class Runner {
 
