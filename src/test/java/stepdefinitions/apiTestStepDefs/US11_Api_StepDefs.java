@@ -6,6 +6,8 @@ import io.restassured.path.json.JsonPath;
 import org.codehaus.jackson.map.ObjectMapper;
 import io.restassured.response.Response;
 import pojos.Appointments;
+import utilities.Driver;
+
 import java.io.IOException;
 import java.util.Arrays;
 import static base_url.AppBaseUrl.spec;
@@ -46,6 +48,11 @@ public class US11_Api_StepDefs {
 
         System.out.println("Total appointments = " + appointments.length);
         assertTrue(appointments!=null);
+    }
+
+    @Then("close the application")
+    public void close_the_application() {
+        Driver.closeDriver();
     }
 
 }
