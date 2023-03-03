@@ -1,4 +1,4 @@
-/*package stepdefinitions.apiTestStepDefs;
+package stepdefinitions.apiTestStepDefs;
 
 import base_url.AppBaseUrl;
 import com.github.javafaker.Faker;
@@ -13,7 +13,6 @@ import pojos.Room;
 
 import java.io.IOException;
 import java.util.HashMap;
-
 
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
@@ -127,6 +126,5 @@ public class RoomCreation extends AppBaseUrl {
 
 
 }
- */
 
 

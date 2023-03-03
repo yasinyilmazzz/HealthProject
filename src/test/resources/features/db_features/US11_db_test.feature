@@ -8,7 +8,3 @@ Feature: database_appointments
     And doctor reads all of the "id" column data
     And doctor verifies the appointments by "id"
     Then close the database connection
-
-
-
-

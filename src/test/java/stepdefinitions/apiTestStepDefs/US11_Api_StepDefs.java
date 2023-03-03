@@ -15,8 +15,6 @@ import static org.junit.Assert.*;
 public class US11_Api_StepDefs {
     Response response;
     Appointments[] appointments;
-
-
     @Given("doctor sends GET request to see appointments")
     public void doctor_sends_get_request_to_see_appointments() {
         // Set the URL
@@ -47,13 +45,7 @@ public class US11_Api_StepDefs {
         appointments= objectMapper.readValue(response.asString(), Appointments[].class);
 
         System.out.println("Total appointments = " + appointments.length);
-
-
         assertTrue(appointments!=null);
-
-
-
-
     }
 
 }

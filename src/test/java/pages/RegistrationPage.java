@@ -96,7 +96,4 @@ public class RegistrationPage {
     @FindBy(name = "username")
     public WebElement userName;
 
-
-
-
 }

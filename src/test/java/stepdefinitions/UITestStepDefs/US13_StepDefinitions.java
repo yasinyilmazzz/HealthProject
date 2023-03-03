@@ -30,6 +30,7 @@ public class US13_StepDefinitions {
         homePage.signInOptionButton.click();
     }
 
+
     @Then("{string} clicks on Sign in button")
     public void clicks_on_sign_in_button(String string) {
         homePage.signInButton.click();
