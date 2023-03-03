@@ -17,14 +17,14 @@ public class AppointmentCheckStepDefs extends AppBaseUrl {
 
         // Set the expected date
         Patient patient=new Patient(null,null,5974,"emre","team2",null,null,null,null,null,null,null);
-        Appointments appointments= new Appointments(null,null,null,"2023-03-10T00:00:00Z","2023-03-11T01:00:00Z","UNAPPROVED",null,null,null,null,null,null,null);
-        //String token="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbnRlYW0wMiIsImF1dGgiOiJST0xFX0FETUlOIiwiZXhwIjoxNjc3OTEyMDczfQ.LGcKhg1jdzwdgQ1Z_NRgiIBQ1N0bD-icW8nTMX2mKoBKpMS5XM4YtE0ufPWhaBQZSEYtRGcg6feO6KiZBl5wJg";
+        Appointments appointments= new Appointments(null,null,null,"2023-03-10T00:00:00Z","2023-03-11T01:00:00Z","UNAPPROVED",null,null,null,null,null,null,patient);
+        String token="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbnRlYW0wMiIsImF1dGgiOiJST0xFX0FETUlOIiwiZXhwIjoxNjc3OTEyMDczfQ.LGcKhg1jdzwdgQ1Z_NRgiIBQ1N0bD-icW8nTMX2mKoBKpMS5XM4YtE0ufPWhaBQZSEYtRGcg6feO6KiZBl5wJg";
         //Send the request and get the response
 
         Response response = given().
                 spec(spec).
                 contentType(ContentType.JSON).
-                header("Authorization","Bearer "+generateToken()).
+                header("Authorization","Bearer "+token).
                 body(appointments).
                 when().
                 post("/{first}/{second}");
