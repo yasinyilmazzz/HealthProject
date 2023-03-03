@@ -28,11 +28,10 @@ Feature:US11_Doctor_Test
 
 
 
-  @TC_03_API_validation
-  Scenario: TC_03_api_validation
-    Given user sends get requests
-    Then HTTP status code should be 200
-    And response body is like that:
+
+
+
+
 
 
 

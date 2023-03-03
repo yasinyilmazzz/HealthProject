@@ -10,11 +10,11 @@ import utilities.ReusableMethods;
 public class HomePageStepDefs {
     HomePage homePage = new HomePage();
 
-    @When("{string} goes home page")
-    public void goes_home_page(String string) {
-
-        Driver.getDriver().get(ConfigReader.getProperty("app_url"));
-    }
+//    @When("{string} goes home page")
+//    public void goes_home_page(String string) {
+//
+//        Driver.getDriver().get(ConfigReader.getProperty("app_url"));
+//    }
     @When("{string} clicks account menu dropdown")
     public void clicks_account_menu_dropdown(String string) {
 

@@ -34,10 +34,10 @@ public class US13_StepDefinitions {
         homePage.signInOptionButton.click();
     }
 
-    @Then("{string} enters {string} in username field")
-    public void enters_in_username_field(String string, String username) {
-        homePage.usernameInput.sendKeys(username);
-    }
+//    @Then("{string} enters {string} in username field")
+//    public void enters_in_username_field(String string, String username) {
+//        homePage.usernameInput.sendKeys(username);
+//    }
 
     @Then("{string} enters {string} in password field")
     public void enters_in_password_field(String string, String password) {

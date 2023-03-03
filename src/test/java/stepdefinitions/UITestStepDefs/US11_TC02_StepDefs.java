@@ -39,8 +39,5 @@ public class US11_TC02_StepDefs {
         }
     }
 
-    @And("close the application")
-    public void closeTheApplication() {
-        Driver.closeDriver();
-    }
+
 }
