@@ -17,11 +17,7 @@ public class US13_StepDefinitions {
     HomePage homePage = new HomePage();
     DoctorPage doctorPage = new DoctorPage();
 
-    @When("{string} goes home page")
-    public void goes_home_page(String string) {
-        Driver.getDriver().get(ConfigReader.getProperty("app_url"));
 
-    }
 
     @Then("{string} clicks on the menu dropdown")
     public void clicks_on_the_menu_dropdown(String string) {
@@ -34,16 +30,18 @@ public class US13_StepDefinitions {
         homePage.signInOptionButton.click();
     }
 
-    @Then("{string} enters {string} in username field")
-    public void enters_in_username_field(String string, String username) {
-        homePage.usernameInput.sendKeys(username);
-    }
+
+//    @Then("{string} enters {string} in username field")
+//    public void enters_in_username_field(String string, String username) {
+//        homePage.usernameInput.sendKeys(username);
+//    }
 
     @Then("{string} enters {string} in password field")
     public void enters_in_password_field(String string, String password) {
         homePage.passwordInput.sendKeys(password);
 
     }
+
 
     @Then("{string} clicks on Sign in button")
     public void clicks_on_sign_in_button(String string) {
@@ -73,10 +71,6 @@ public class US13_StepDefinitions {
 
     }
 
-    @Then("close the application")
-    public void close_the_application() {
-        Driver.closeDriver();
-    }
 
     @Then("{string} should see items as checkmark {string}")
     public void should_see_items_as_checkmark(String string , String itemName) {

@@ -12,10 +12,10 @@ public class LoginPageStepDefs {
     public void enters_in_username_field(String string, String username) {
         loginPage.username.sendKeys(ConfigReader.getProperty(username));
     }
-    @When("{string} enters {string} in password field")
-    public void enters_in_password_field(String string, String password) {
-        loginPage.password.sendKeys(ConfigReader.getProperty(password));
-    }
+//    @When("{string} enters {string} in password field")
+//    public void enters_in_password_field(String string, String password) {
+//        loginPage.password.sendKeys(ConfigReader.getProperty(password));
+//    }
     @When("{string} clicks sign in submit button")
     public void clicks_sign_in_submit_button(String string) {
         loginPage.submitButton.click();

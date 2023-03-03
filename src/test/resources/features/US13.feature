@@ -53,11 +53,6 @@ Feature:US13_Doctor_Request_Test
 
 
 
-
-
-
-
-
 # "Test should have following items as checkmark options; Glucose, Urea, Creatinine, Sodium
 # Potassium, Total protein, Albumin, Hemoglobin"
 #  @TC01_doctorRequest

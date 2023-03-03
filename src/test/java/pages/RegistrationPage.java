@@ -10,7 +10,36 @@ public class RegistrationPage {
     public RegistrationPage(){
 
         PageFactory.initElements(Driver.getDriver(),this);
+
     }
+
+    @FindBy(id="ssn")
+    public WebElement ssnTextInput;
+
+    @FindBy(id = "firstName")
+    public WebElement firstNameTextInput;
+
+    @FindBy(id = "lastName")
+    public WebElement lastNameTextInput;
+
+    @FindBy(id = "username")
+    public WebElement userNameTextInput;
+
+    @FindBy(id = "email")
+    public WebElement emailTextInput;
+
+    @FindBy(id="secondPassword")
+    public WebElement secondPasswordTextInput;
+
+    @FindBy(id="register-submit")
+    public WebElement registerSubmitButton;
+
+    @FindBy(xpath = "//*[contains(text(),'Registration Saved')]")
+    public WebElement successMessageToastContainer;
+
+
+
+    //*****************
 
     @FindBy(id = "account-menu")
     public WebElement userIcon;
@@ -30,8 +59,6 @@ public class RegistrationPage {
     public WebElement RegisterSubmitButton;
     @FindBy(xpath = "//div[.='Your password is required.']")
     public WebElement errorMessagePassRequired;
-    @FindBy(id="register-submit")
-    public WebElement registerSubmitButton;
     @FindBy(xpath = "//div[.='Your password is required to be at least 4 characters.']")
     public WebElement errorMessagePassAtLeast4Char;
 //=====
@@ -68,8 +95,5 @@ public class RegistrationPage {
 
     @FindBy(name = "username")
     public WebElement userName;
-
-
-
 
 }
