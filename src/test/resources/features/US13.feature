@@ -1,11 +1,11 @@
 @US_13
 Feature:US13_Doctor_Request_Test
   Background: user_goes_to_medunna_site
-  When "Doctor" goes home page
+  When "Doctor" goes home pagee
   Then "Doctor" clicks on the menu dropdown
   And "Doctor" clicks on the Sign in button
-  And "Doctor" enters "doctorJames" in username field
-  And "Doctor" enters "James1234." in password field
+  And "Doctor" enters "doctorJames" in username fields
+  And "Doctor" enters "James1234." in password fields
   And "Doctor" clicks on Sign in button
 
 

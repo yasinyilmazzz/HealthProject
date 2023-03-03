@@ -12,4 +12,3 @@ Feature: US01_DataBase_ssn
 
 
 
-                              #Tese case  = Validate registrant SSN ids with DB

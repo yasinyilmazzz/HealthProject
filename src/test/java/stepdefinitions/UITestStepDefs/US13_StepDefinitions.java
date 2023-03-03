@@ -3,9 +3,7 @@ package stepdefinitions.UITestStepDefs;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import pages.DoctorPage;
 import pages.HomePage;
 import utilities.ConfigReader;
@@ -17,8 +15,8 @@ public class US13_StepDefinitions {
     HomePage homePage = new HomePage();
     DoctorPage doctorPage = new DoctorPage();
 
-    @When("{string} goes home page")
-    public void goes_home_page(String string) {
+    @When("{string} goes home pagee")
+    public void goes_home_pagee(String string) {
         Driver.getDriver().get(ConfigReader.getProperty("app_url"));
 
     }
@@ -34,15 +32,14 @@ public class US13_StepDefinitions {
         homePage.signInOptionButton.click();
     }
 
-    @Then("{string} enters {string} in username field")
-    public void enters_in_username_field(String string, String username) {
+    @Then("{string} enters {string} in username fields")
+    public void enters_in_username_fields(String string, String username) {
         homePage.usernameInput.sendKeys(username);
     }
 
-    @Then("{string} enters {string} in password field")
-    public void enters_in_password_field(String string, String password) {
+    @Then("{string} enters {string} in password fields")
+    public void enters_in_password_fields(String string, String password) {
         homePage.passwordInput.sendKeys(password);
-
     }
 
     @Then("{string} clicks on Sign in button")
