@@ -1,4 +1,4 @@
-@US01_Api
+@API_Tests
   Feature: Registration_api_test
 
     Scenario: US01_HealthProject_Registration

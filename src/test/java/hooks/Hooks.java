@@ -10,6 +10,7 @@ import utilities.Driver;
 
 
 import static base_url.AppBaseUrl.medunnaSetUp;
+import static base_urls.MedunnaBaseUrl.medunnaSetUp2;
 
 
 public class Hooks {
@@ -55,5 +56,13 @@ Hooks is used to run before and after each SCENARIO or SCENARIO OUTLINE
         medunnaSetUp();
 
     }
+
+
+    @Before("@API_validation")
+    public void beforeApi2(){
+        medunnaSetUp2();     // This method actually works If you use the new one you will get 500 error.
+
+    }
+
 
 }

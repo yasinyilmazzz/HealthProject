@@ -45,7 +45,6 @@ public class Us01_RegisterationPageStepDefs {
         registrationPage.registerSubmitButton.click();
     }
 
-
     @Then("Verify the error message appears")
     public void verifyTheErrorMessageAppears() {
         ReusableMethods.waitFor(3);
@@ -64,11 +63,12 @@ public class Us01_RegisterationPageStepDefs {
         registrationPage.enterLastName.sendKeys("France");
     }
 
-
     @Then("verify LastName box contains Valid Last Name")
     public void verifyLastNameBoxContainsValidLastName() {
         Assert.assertTrue(registrationPage.enteredLastName.toString().contains("France"));
 
-
     }
+
+
+
 }
