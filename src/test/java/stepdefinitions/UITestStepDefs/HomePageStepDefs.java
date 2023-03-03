@@ -10,8 +10,8 @@ import utilities.ReusableMethods;
 public class HomePageStepDefs {
     HomePage homePage = new HomePage();
 
-    @When("{string} goes home page")
-    public void goes_home_page(String string) {
+    @When("{string} goes home pagee")
+    public void goes_home_pagee(String string) {
 
         Driver.getDriver().get(ConfigReader.getProperty("app_url"));
     }

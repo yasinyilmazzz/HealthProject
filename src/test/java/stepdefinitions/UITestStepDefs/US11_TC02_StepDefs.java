@@ -38,8 +38,5 @@ public class US11_TC02_StepDefs {
             System.out.println(w.getText());
         }
     }
-//    @And("close the application")
-//    public void closeTheApplication() {
-//        Driver.closeDriver();
-//    }
+
 }

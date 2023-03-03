@@ -31,6 +31,18 @@ public class US13_StepDefinitions {
     }
 
 
+//    @Then("{string} enters {string} in username field")
+//    public void enters_in_username_field(String string, String username) {
+//        homePage.usernameInput.sendKeys(username);
+//    }
+
+    @Then("{string} enters {string} in password field")
+    public void enters_in_password_field(String string, String password) {
+        homePage.passwordInput.sendKeys(password);
+
+    }
+
+
     @Then("{string} clicks on Sign in button")
     public void clicks_on_sign_in_button(String string) {
         homePage.signInButton.click();
