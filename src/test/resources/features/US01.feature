@@ -54,4 +54,3 @@
       Then verify that error message appears
       And User closes the application
 
-
