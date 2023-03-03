@@ -6,6 +6,8 @@ import io.restassured.path.json.JsonPath;
 import org.codehaus.jackson.map.ObjectMapper;
 import io.restassured.response.Response;
 import pojos.Appointments;
+import utilities.Driver;
+
 import java.io.IOException;
 import java.util.Arrays;
 import static base_url.AppBaseUrl.spec;
@@ -15,8 +17,6 @@ import static org.junit.Assert.*;
 public class US11_Api_StepDefs {
     Response response;
     Appointments[] appointments;
-
-
     @Given("doctor sends GET request to see appointments")
     public void doctor_sends_get_request_to_see_appointments() {
         // Set the URL
@@ -47,13 +47,12 @@ public class US11_Api_StepDefs {
         appointments= objectMapper.readValue(response.asString(), Appointments[].class);
 
         System.out.println("Total appointments = " + appointments.length);
-
-
         assertTrue(appointments!=null);
+    }
 
-
-
-
+    @Then("close the application")
+    public void close_the_application() {
+        Driver.closeDriver();
     }
 
 }

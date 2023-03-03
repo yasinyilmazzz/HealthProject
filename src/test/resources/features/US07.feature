@@ -32,7 +32,6 @@ Feature: Patient Login and Update Info
       | apple     | orange   |
 
 
-
     #firstname and lastname can not include numeric, this is a bug.
   @patient_info_update
   Scenario Outline: TC_04 Patient Info Updated Negative Test

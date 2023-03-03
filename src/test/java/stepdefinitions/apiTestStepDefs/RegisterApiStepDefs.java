@@ -38,8 +38,6 @@ public class RegisterApiStepDefs {
         assertEquals("true",jsonPath.getString("activated"));
 
     }
-
-
 }
 /*
                                                                     {
