@@ -16,8 +16,8 @@ import org.junit.runner.RunWith;
         monochrome = true,
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
-        dryRun = true,
-        tags = "@TC01_doctorRequest"
+        dryRun = false,
+        tags = "@US01_DataBase"
 //        plugin = {
 //                "pretty",
 //                "html:target/default-cucumber-reports.html",

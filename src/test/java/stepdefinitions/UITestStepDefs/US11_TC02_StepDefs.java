@@ -1,10 +1,8 @@
 package stepdefinitions.UITestStepDefs;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.openqa.selenium.WebElement;
 import pages.DoctorsPage;
-import utilities.Driver;
 import utilities.ReusableMethods;
 
 import static org.junit.Assert.assertTrue;
@@ -39,8 +37,8 @@ public class US11_TC02_StepDefs {
         }
     }
 
-    @And("close the application")
-    public void closeTheApplication() {
-        Driver.closeDriver();
-    }
+//    @And("close the application")
+//    public void closeTheApplication() {
+//        Driver.closeDriver();
+//    }
 }

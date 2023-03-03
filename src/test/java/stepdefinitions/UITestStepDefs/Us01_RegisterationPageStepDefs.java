@@ -68,4 +68,7 @@ public class Us01_RegisterationPageStepDefs {
         Assert.assertTrue(registrationPage.enteredLastName.toString().contains("France"));
 
     }
+
+
+
 }
