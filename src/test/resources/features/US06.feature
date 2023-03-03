@@ -125,19 +125,3 @@ Feature: Health_Project US06:
         And click on My Appointments
         And verify that patient updated info is displayed
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

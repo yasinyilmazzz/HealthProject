@@ -17,9 +17,9 @@ import org.junit.runner.RunWith;
 
 
         features = "./src/test/resources/features",
-        dryRun =false,
+        dryRun =true,
         glue = {"stepdefinitions", "hooks"},
-        tags = "@db_validate_appointment_info"
+        tags = "@US06"
 
 )
 
