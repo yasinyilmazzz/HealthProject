@@ -7,11 +7,14 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import pojos.Appointments;
 import pojos.Patient;
+
+import static base_url.AppBaseUrl.spec;
 import static io.restassured.RestAssured.given;
+
 import static utilities.PatientGenerateToken.generateToken;
 
 
-    public class AppointmentCheckStepDefs extends AppBaseUrl {
+    public class AppointmentCheckStepDefs {
 
         @Given("User send post request for appointment")
         public void user_send_post_request_for_appointment() {
@@ -28,7 +31,8 @@ import static utilities.PatientGenerateToken.generateToken;
             Response response = given().
                     spec(spec).
                     contentType(ContentType.JSON).
-                    headers("Authorization","Bearer "+generateToken(),"Content-Type", ContentType.JSON,
+                    headers("Authorization","Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbnRlYW0wMiIsImF1dGgiOiJST0xFX0FETUlOIiwiZXhwIjoxNjc3OTM4ODE5fQ.GEwH7RvryxhD9fGM1vG_JKoMZ6LWVDiABPeOQRRcZBZjljnniUkibmewpRGDt1Q-mkM8eKGnzQDzkqJ7dudzWQ",
+                            "Content-Type", ContentType.JSON,
                             "Accept", ContentType.JSON).
                     body(appointments).
                     when().
