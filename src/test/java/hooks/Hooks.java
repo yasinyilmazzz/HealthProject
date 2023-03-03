@@ -57,10 +57,12 @@ Hooks is used to run before and after each SCENARIO or SCENARIO OUTLINE
 
     }
 
+
     @Before("@API_validation")
     public void beforeApi2(){
         medunnaSetUp2();     // This method actually works If you use the new one you will get 500 error.
 
     }
+
 
 }

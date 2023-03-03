@@ -20,7 +20,7 @@ import org.junit.runner.RunWith;
         glue = {"stepdefinitions", "hooks"},
 
         dryRun = false,
-        tags = "@US01_DataBase"
+        tags = "@API_Tests"
 
         tags = "@US06"
 
