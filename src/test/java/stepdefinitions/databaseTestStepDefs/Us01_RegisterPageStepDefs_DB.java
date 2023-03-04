@@ -3,7 +3,9 @@ package stepdefinitions.databaseTestStepDefs;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import utilities.ConfigReader;
 import utilities.DBUtils;
+import utilities.Driver;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -50,6 +52,7 @@ public class Us01_RegisterPageStepDefs_DB {
             assertTrue(ids.contains(ssnColumnData.toString()));
         }
     }
+
 
 
 }

@@ -3,10 +3,12 @@ package stepdefinitions.UITestStepDefs;
 
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import pages.RegistrationPage;
 import utilities.ConfigReader;
+import utilities.Driver;
 import utilities.ReusableMethods;
 
 import static org.junit.Assert.assertTrue;
@@ -68,7 +70,15 @@ public class Us01_RegisterationPageStepDefs {
         Assert.assertTrue(registrationPage.enteredLastName.toString().contains("France"));
 
     }
+    @Given("{string} goes home page")
+    public void goesHomePage(String arg0) {
+        Driver.getDriver().get(ConfigReader.getProperty("app_url"));
+    }
 
 
+    @And("User clicks on {string} from drop down menu")
+    public void userClicksOnFromDropDownMenu(String arg0) {
 
+        registrationPage.registerButton.click();
+    }
 }
