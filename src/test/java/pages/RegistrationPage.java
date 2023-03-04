@@ -34,7 +34,7 @@ public class RegistrationPage {
     @FindBy(id="register-submit")
     public WebElement registerSubmitButton;
 
-    @FindBy(xpath = "//*[contains(text(),'Registration Saved')]")
+    @FindBy(xpath = "//div[@role='alert']")
     public WebElement successMessageToastContainer;
 
 

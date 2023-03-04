@@ -21,7 +21,6 @@ public class MakeAppointment_StepDefs {
 
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
-    Registerpage registerpage = new Registerpage();
     RegistrationPage registrationPage = new RegistrationPage();
     MyAppointmentsPage myAppointmentsPage = new MyAppointmentsPage();
     HomePageAppointment homePageAppointment = new HomePageAppointment();

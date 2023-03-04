@@ -10,7 +10,8 @@ import utilities.Driver;
 
 
 import static base_url.AppBaseUrl.medunnaSetUp;
-import static base_urls.MedunnaBaseUrl.medunnaSetUp2;
+import static base_url.MedunnaBaseUrl.medunnaSetUp2;
+import static base_url.MedunnaBaseUrl.medunnaSetUp2;
 
 
 public class Hooks {
@@ -51,7 +52,7 @@ Hooks is used to run before and after each SCENARIO or SCENARIO OUTLINE
 
         System.out.println("RUN FOR ONLY SMOKE TEST SCENARIOS");
     }
-    @Before("@US08")
+    @Before("@API_Tests")
     public void beforeApi(){  // This method will run before Api Tests
         medunnaSetUp();
 

@@ -1,4 +1,4 @@
-@registration_password
+@registration_password  @smoke_test
 Feature:Password_strength_test
 
   Background:User_goes_to_url

@@ -1,4 +1,3 @@
-/*
 package stepdefinitions.UITestStepDefs;
 
 import io.cucumber.java.en.Then;
@@ -17,10 +16,11 @@ public class US13_StepDefinitions {
     DoctorPage doctorPage = new DoctorPage();
 
 
-    @When("{string} goes home pagee")
-    public void goes_home_pagee(String string) {
-        Driver.getDriver().get(ConfigReader.getProperty("app_url"));
-
+//    @When("{string} goes home pagee")
+//    public void goes_home_pagee(String string) {
+//        Driver.getDriver().get(ConfigReader.getProperty("app_url"));
+//    }
+//
 
         @Then("{string} clicks on the menu dropdown")
         public void clicks_on_the_menu_dropdown (String string){
@@ -88,8 +88,4 @@ public class US13_StepDefinitions {
             doctorPage.isTestSuccess.isDisplayed();
         }
 
-
-    }
 }
-
- */

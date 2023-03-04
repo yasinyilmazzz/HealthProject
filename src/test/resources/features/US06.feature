@@ -1,4 +1,4 @@
-@US06
+@US06  @smoke_test
 Feature: Health_Project US06:
 
   Background: User_goes_to_url

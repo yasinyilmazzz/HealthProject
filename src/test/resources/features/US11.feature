@@ -1,4 +1,4 @@
-@@us_11
+@us_11
 Feature: Doctor_Appointments_Visible
 
   Background: Sign In Medunna
