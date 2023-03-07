@@ -5,3 +5,4 @@ pom.xml
 /src/test/java/runners/Runner.java
 /test-output/
 /.idea/
+/src/test/java/runners/

@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions"},
         dryRun = false,
-        tags = "@scenario_outline"
+        tags = "@smoke_test"
 )
 public class SmokeTestRunner {
 }

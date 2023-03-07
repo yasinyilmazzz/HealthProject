@@ -10,6 +10,8 @@ import utilities.Driver;
 
 
 import static base_url.AppBaseUrl.medunnaSetUp;
+import static base_url.MedunnaBaseUrl.medunnaSetUp2;
+import static base_url.MedunnaBaseUrl.medunnaSetUp2;
 
 
 public class Hooks {
@@ -43,22 +45,25 @@ Hooks is used to run before and after each SCENARIO or SCENARIO OUTLINE
         System.out.println("RUN FOR ONLY SMOKE TEST SCENARIOS");
     }
     //This After hooks ONLY RUNS for @smoke_test TAGGED SCENARIOS
+
+
     @After("@smoke_tests")
     public void tearDownSmokeScenarios(){
 
         System.out.println("RUN FOR ONLY SMOKE TEST SCENARIOS");
     }
-
-
-
-
-
-
-
     @Before("@API_Tests")
     public void beforeApi(){  // This method will run before Api Tests
         medunnaSetUp();
 
     }
+
+
+    @Before("@API_validation")
+    public void beforeApi2(){
+        medunnaSetUp2();     // This method actually works If you use the new one you will get 500 error.
+
+    }
+
 
 }
